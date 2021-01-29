@@ -9,3 +9,5 @@ This is preety much similar to Rock, Paper, Scissors.
 Snake beats water, Water beats gun, Gun beats snake.
 Type "s" for Snake "w" for Water and "g" for Gun.
 You can play 10 matches and at the end you will get the result of the game.
+
+Run this code using python!
