@@ -1,0 +1,70 @@
+import random
+lst = ['s','w','g']
+
+chance = 10
+no_of_chance = 0
+c_point = 0
+h_point = 0
+
+print(" \t \t \t \t Snake,Water,Gun Game\n \n")
+print("s for snake \nw for water \ng for gun \n")
+print("Rules:\nSnake beats water, Water beats gun, Gun beats snake")
+#making the game in while
+while no_of_chance < chance:
+    _input = input('Snake,Water,Gun:')
+    _random = random.choice(lst)
+    
+    if _input == _random:
+        print("TIE 0 points to each \n")
+        
+    #if user enters s
+    elif _input == 's' and _random == 'g':
+        c_point = c_point + 1
+        print(f"you entered {_input} and computer entered {_random} \n")
+        print("Computer Wins 1 Point \n")
+        
+    elif _input == 's' and _random == 'w':
+        h_point = h_point + 1
+        print(f"you entered {_input} and computer entered {_random} \n")
+        print("Human Wins 1 Point \n")
+        
+    #if user enters w
+    elif _input == 'w' and _random == 's':
+        c_point = c_point + 1
+        print(f"you entered {_input} and computer entered {_random} \n")
+        print("Computer Wins 1 Point \n")
+        
+    elif _input == 'w' and _random == 'g':
+        h_point = h_point + 1
+        print(f"you entered {_input} and computer entered {_random} \n")
+        print("Human Wins 1 Point \n")
+        
+    #if user enters g
+    elif _input == 'g' and _random == 'w':
+        c_point = c_point + 1
+        print(f"you entered {_input} and computer entered {_random} \n")
+        print("Computer Wins 1 Point \n")
+        
+    elif _input == 'g' and _random == 's':
+        h_point = h_point + 1
+        print(f"you entered {_input} and computer entered {_random} \n")
+        print("Human Wins 1 Point \n")
+        
+    else:
+        print("You have wrong input")
+        
+    no_of_chance = no_of_chance + 1
+    print(f"{chance - no_of_chance} is left out of {chance}")
+    
+print("GAME OVER")
+
+if c_point == h_point:
+    print("TIE!!!")
+
+if c_point > h_point:
+    print("Computer Won!!!")
+    
+if c_point < h_point:
+    print("You Won!!!")
+    
+print(f"Your points are {h_point} and computer points are {c_point}")
